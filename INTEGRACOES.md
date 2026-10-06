@@ -8,6 +8,7 @@ O objetivo de integrar completamente todos os tribunais **não está concluído*
 | --- | --- | --- |
 | STJ — dez conjuntos de espelhos de acórdãos | Importação verificada | Último arquivo mensal JSON de cada conjunto; 9.531 acórdãos na primeira importação |
 | TJDFT — API pública de jurisprudência | Consulta direta ativada via https://juriscreis-api.onrender.com | Consulta sob demanda, com total e paginação fornecidos pela API |
+| STF | Pesquisa externa oficial; acesso automático bloqueado nas fontes testadas | Nenhum documento importado; copiar tema e consultar no portal do STF |
 | Demais tribunais | Sem conector verificado | Somente pesquisa externa no portal; não anunciados como integrados |
 
 Os dados do STJ são uma seleção de espelhos tratados pela Secretaria de Jurisprudência. Nem mesmo baixar todo esse conjunto significa obter todos os julgados do tribunal. O JSON mensal é incremental; o ZIP mais antigo contém histórico. O recorte gratuito aqui importa apenas o último JSON mensal de cada conjunto. Não substitui esse histórico.
@@ -68,3 +69,11 @@ O teste do worker usa os arquivos realmente importados. Os testes do servidor ve
 - [Documentação oficial da API do TJDFT](https://www.tjdft.jus.br/transparencia/tecnologia-da-informacao-e-comunicacao/dados-abertos/documentos/documentacao_api_seti_transparencia.pdf).
 - [Planos gratuitos — Render](https://render.com/docs/free).
 - [Implantar com blueprint — Render](https://render.com/docs/deploy-to-render).
+
+## STF: limite verificado e próximo passo
+
+Em 06/10/2026, as solicitações ao portal de jurisprudência e aos PDFs oficiais de súmulas retornaram HTTP 403 no ambiente de execução. Nenhuma proteção foi contornada. Não foi ativado um conector automático nem anunciada cobertura do acervo do STF.
+
+Ao selecionar STF, o site oferece o tema pesquisado como texto, um botão de copiar e links para a pesquisa oficial e para as súmulas. Nenhuma consulta ao STF ocorre automaticamente. Esse acesso externo também está disponível na aba Busca nacional externa.
+
+Para importar textos, é necessário obter uma fonte oficial acessível, um canal autorizado de acesso automatizado ou arquivos oficiais fornecidos pelo usuário. Uma eventual importação de súmulas deverá informar edição, origem e situação dos enunciados, preservando os cancelamentos e as alterações; ela não equivale ao acervo completo de acórdãos.
