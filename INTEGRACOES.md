@@ -7,12 +7,16 @@ O objetivo de integrar completamente todos os tribunais **não está concluído*
 | Fonte | Situação | Alcance |
 | --- | --- | --- |
 | STJ — dez conjuntos de espelhos de acórdãos | Importação verificada | Último arquivo mensal JSON de cada conjunto; 9.531 acórdãos na primeira importação |
-| TJDFT — API pública de jurisprudência | Conector testado; serviço externo aguardando ativação | Consulta sob demanda, com total e paginação fornecidos pela API |
+| TJDFT — API pública de jurisprudência | Consulta direta ativada via https://juriscreis-api.onrender.com | Consulta sob demanda, com total e paginação fornecidos pela API |
 | Demais tribunais | Sem conector verificado | Somente pesquisa externa no portal; não anunciados como integrados |
 
 Os dados do STJ são uma seleção de espelhos tratados pela Secretaria de Jurisprudência. Nem mesmo baixar todo esse conjunto significa obter todos os julgados do tribunal. O JSON mensal é incremental; o ZIP mais antigo contém histórico. O recorte gratuito aqui importa apenas o último JSON mensal de cada conjunto. Não substitui esse histórico.
 
-## Ativar o serviço gratuito do TJDFT
+## Serviço gratuito do TJDFT
+
+O serviço está ativo em https://juriscreis-api.onrender.com e configurado em `assets/integration-config.json`. A consulta real e a permissão de acesso do domínio do GitHub Pages foram verificadas.
+
+### Recriar o serviço, se necessário
 
 O código e a configuração já estão preparados em `backend/server.py` e `render.yaml`.
 
