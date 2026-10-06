@@ -8,6 +8,7 @@ O objetivo de integrar completamente todos os tribunais **não está concluído*
 | --- | --- | --- |
 | STJ — dez conjuntos de espelhos de acórdãos | Importação verificada | Último arquivo mensal JSON de cada conjunto; 9.531 acórdãos na primeira importação |
 | TJDFT — API pública de jurisprudência | Consulta direta ativada via https://juriscreis-api.onrender.com | Consulta sob demanda, com total e paginação fornecidos pela API |
+| TST — pesquisa textual oficial | Conector testado; serviço Render precisa executar a nova versão | Ementas, dispositivo, total e paginação da fonte; sem cópia integral |
 | STF | Pesquisa externa oficial; acesso automático bloqueado nas fontes testadas | Nenhum documento importado; copiar tema e consultar no portal do STF |
 | Demais tribunais | Sem conector verificado | Somente pesquisa externa no portal; não anunciados como integrados |
 
@@ -77,3 +78,17 @@ Em 06/10/2026, as solicitações ao portal de jurisprudência e aos PDFs oficiai
 Ao selecionar STF, o site oferece o tema pesquisado como texto, um botão de copiar e links para a pesquisa oficial e para as súmulas. Nenhuma consulta ao STF ocorre automaticamente. Esse acesso externo também está disponível na aba Busca nacional externa.
 
 Para importar textos, é necessário obter uma fonte oficial acessível, um canal autorizado de acesso automatizado ou arquivos oficiais fornecidos pelo usuário. Uma eventual importação de súmulas deverá informar edição, origem e situação dos enunciados, preservando os cancelamentos e as alterações; ela não equivale ao acervo completo de acórdãos.
+
+## TST: consulta direta de acórdãos
+
+O conector utiliza o endereço publicado em `https://jurisprudencia.tst.jus.br/config.json` e o formato de consulta usado pelo JavaScript da página oficial. Trata-se de um serviço público usado pelo portal; não foi encontrada documentação de API externa com garantia de estabilidade. A consulta foi verificada em 06/10/2026.
+
+A rota `/api/tst/search` do serviço do Juriscreis aceita somente termo, página e tamanho. Ela encaminha POST ao endereço fixo `https://jurisprudencia-backend.tst.jus.br/rest/pesquisa-textual/{inicio}/{tamanho}`, com órgão TST e tipo ACORDAO. O início é calculado por `pagina * tamanho + 1`. A pesquisa usa o campo oficial `e` (todos os termos no texto do julgado), e mostra o total informado pelo tribunal. As regras de pesquisa e os limites são os da fonte; os controles locais de correspondência e ordenação ficam desabilitados quando apenas TST é selecionado.
+
+São exibidos a ementa original, o dispositivo disponível, o processo, o órgão julgador, o relator e as datas. O link para o inteiro teor utiliza o endereço e os parâmetros publicados pelo próprio portal. Não são reenviados o CPF do signatário, o HTML do inteiro teor ou os destaques HTML da resposta.
+
+A consulta exige um tema e não copia o acervo. Súmulas, OJs, precedentes normativos e decisões monocráticas não fazem parte desta integração inicial. Falhas da fonte aparecem como consulta não concluída, não como ausência de jurisprudência. As respostas têm cache temporário de 60 segundos, compartilhando o limite de concorrência e o serviço gratuito usado pelo TJDFT.
+
+### Publicar o conector no Render
+
+Se `/health` ainda listar apenas TJDFT, abra o serviço `juriscreis-api` no painel Render e selecione **Manual Deploy → Deploy latest commit**. Aguarde Live. A nova versão de `/health` lista TJDFT e TST. Depois, consulte um tema pela rota `/api/tst/search` ou pelo site para verificar a fonte; o health sozinho não garante disponibilidade do tribunal.
