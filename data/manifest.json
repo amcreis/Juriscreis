@@ -1,0 +1,354 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-06T17:42:16.671200+00:00",
+  "total": 9531,
+  "court": "STJ",
+  "coverage": "partial",
+  "monthsPerDataset": 1,
+  "scope": "Espelhos de acórdãos: os últimos 1 arquivos JSON mensais publicados em cada um dos 10 conjuntos. Não inclui o ZIP histórico nem o acervo integral do STJ.",
+  "dateMin": "2015-05-07",
+  "dateMax": "2026-08-26",
+  "license": "CC BY — atribuição ao Superior Tribunal de Justiça",
+  "sources": [
+    {
+      "court": "STJ",
+      "dataset": "espelhos-de-acordaos-corte-especial",
+      "label": "Espelhos de acórdãos - Corte Especial",
+      "status": "partial",
+      "records": 167,
+      "rejected": 0,
+      "license": "cc-by",
+      "catalogUrl": "https://dadosabertos.web.stj.jus.br/dataset/espelhos-de-acordaos-corte-especial",
+      "resources": [
+        {
+          "name": "20260831.json",
+          "id": "748ef76d-a248-434b-bb6a-deb444f70f73",
+          "url": "https://dadosabertos.web.stj.jus.br/dataset/5ebbfe8a-05f3-4106-a160-794d91b740b8/resource/748ef76d-a248-434b-bb6a-deb444f70f73/download/20260831.json"
+        }
+      ]
+    },
+    {
+      "court": "STJ",
+      "dataset": "espelhos-de-acordaos-primeira-secao",
+      "label": "Espelhos de acórdãos - Primeira Seção",
+      "status": "partial",
+      "records": 110,
+      "rejected": 0,
+      "license": "cc-by",
+      "catalogUrl": "https://dadosabertos.web.stj.jus.br/dataset/espelhos-de-acordaos-primeira-secao",
+      "resources": [
+        {
+          "name": "20260831.json",
+          "id": "d3d08411-aeab-4e77-80c2-07b070a9a4f2",
+          "url": "https://dadosabertos.web.stj.jus.br/dataset/a96a175b-a54b-4bfd-82b8-fcd7cc0200bc/resource/d3d08411-aeab-4e77-80c2-07b070a9a4f2/download/20260831.json"
+        }
+      ]
+    },
+    {
+      "court": "STJ",
+      "dataset": "espelhos-de-acordaos-segunda-secao",
+      "label": "Espelhos de acórdãos - Segunda Seção",
+      "status": "partial",
+      "records": 189,
+      "rejected": 0,
+      "license": "cc-by",
+      "catalogUrl": "https://dadosabertos.web.stj.jus.br/dataset/espelhos-de-acordaos-segunda-secao",
+      "resources": [
+        {
+          "name": "20260831.json",
+          "id": "7a5a4d4e-aec0-4d08-9a74-b1e9eb47e54e",
+          "url": "https://dadosabertos.web.stj.jus.br/dataset/7107650a-f26c-4900-bffd-4492af6361cf/resource/7a5a4d4e-aec0-4d08-9a74-b1e9eb47e54e/download/20260831.json"
+        }
+      ]
+    },
+    {
+      "court": "STJ",
+      "dataset": "espelhos-de-acordaos-terceira-secao",
+      "label": "Espelhos de acórdãos - Terceira Seção",
+      "status": "partial",
+      "records": 101,
+      "rejected": 0,
+      "license": "cc-by",
+      "catalogUrl": "https://dadosabertos.web.stj.jus.br/dataset/espelhos-de-acordaos-terceira-secao",
+      "resources": [
+        {
+          "name": "20260831.json",
+          "id": "d00e4064-2031-46ee-a401-f233678b5c2e",
+          "url": "https://dadosabertos.web.stj.jus.br/dataset/ae0cdcd7-5a12-4586-a51d-a25fd59a7d31/resource/d00e4064-2031-46ee-a401-f233678b5c2e/download/20260831.json"
+        }
+      ]
+    },
+    {
+      "court": "STJ",
+      "dataset": "espelhos-de-acordaos-primeira-turma",
+      "label": "Espelhos de acórdãos - Primeira Turma",
+      "status": "partial",
+      "records": 676,
+      "rejected": 0,
+      "license": "cc-by",
+      "catalogUrl": "https://dadosabertos.web.stj.jus.br/dataset/espelhos-de-acordaos-primeira-turma",
+      "resources": [
+        {
+          "name": "20260831.json",
+          "id": "f3eeebe9-48ef-4879-a0bf-c2ee71386695",
+          "url": "https://dadosabertos.web.stj.jus.br/dataset/a927747a-2fc9-46f7-be25-c3f12e7d560c/resource/f3eeebe9-48ef-4879-a0bf-c2ee71386695/download/20260831.json"
+        }
+      ]
+    },
+    {
+      "court": "STJ",
+      "dataset": "espelhos-de-acordaos-segunda-turma",
+      "label": "Espelhos de acórdãos - Segunda Turma",
+      "status": "partial",
+      "records": 1100,
+      "rejected": 0,
+      "license": "cc-by",
+      "catalogUrl": "https://dadosabertos.web.stj.jus.br/dataset/espelhos-de-acordaos-segunda-turma",
+      "resources": [
+        {
+          "name": "20260831.json",
+          "id": "443ea709-06b3-4036-821a-b7250562b4ad",
+          "url": "https://dadosabertos.web.stj.jus.br/dataset/f886403b-7b2f-4d54-b6f6-2e5b16e245ee/resource/443ea709-06b3-4036-821a-b7250562b4ad/download/20260831.json"
+        }
+      ]
+    },
+    {
+      "court": "STJ",
+      "dataset": "espelhos-de-acordaos-terceira-turma",
+      "label": "Espelhos de acórdãos - Terceira Turma",
+      "status": "partial",
+      "records": 967,
+      "rejected": 0,
+      "license": "cc-by",
+      "catalogUrl": "https://dadosabertos.web.stj.jus.br/dataset/espelhos-de-acordaos-terceira-turma",
+      "resources": [
+        {
+          "name": "20260831.json",
+          "id": "fef2eb32-c4b6-4c6c-951d-cdc4ed84e01d",
+          "url": "https://dadosabertos.web.stj.jus.br/dataset/74a99dea-a197-4d73-a169-d8c8f8f0b175/resource/fef2eb32-c4b6-4c6c-951d-cdc4ed84e01d/download/20260831.json"
+        }
+      ]
+    },
+    {
+      "court": "STJ",
+      "dataset": "espelhos-de-acordaos-quarta-turma",
+      "label": "Espelhos de acórdãos - Quarta Turma",
+      "status": "partial",
+      "records": 1303,
+      "rejected": 0,
+      "license": "cc-by",
+      "catalogUrl": "https://dadosabertos.web.stj.jus.br/dataset/espelhos-de-acordaos-quarta-turma",
+      "resources": [
+        {
+          "name": "20260831.json",
+          "id": "a88156c3-ff2d-4775-9d46-12585465f4e3",
+          "url": "https://dadosabertos.web.stj.jus.br/dataset/bab65848-f287-4146-8273-e58faee39ad2/resource/a88156c3-ff2d-4775-9d46-12585465f4e3/download/20260831.json"
+        }
+      ]
+    },
+    {
+      "court": "STJ",
+      "dataset": "espelhos-de-acordaos-quinta-turma",
+      "label": "Espelhos de acórdãos - Quinta Turma",
+      "status": "partial",
+      "records": 2629,
+      "rejected": 0,
+      "license": "cc-by",
+      "catalogUrl": "https://dadosabertos.web.stj.jus.br/dataset/espelhos-de-acordaos-quinta-turma",
+      "resources": [
+        {
+          "name": "20260831.json",
+          "id": "85e3924f-9307-4c82-bb9c-a7b2de4e958f",
+          "url": "https://dadosabertos.web.stj.jus.br/dataset/b79a7764-5c86-4530-9b6b-18cf60e2f38f/resource/85e3924f-9307-4c82-bb9c-a7b2de4e958f/download/20260831.json"
+        }
+      ]
+    },
+    {
+      "court": "STJ",
+      "dataset": "espelhos-de-acordaos-sexta-turma",
+      "label": "Espelhos de acórdãos - Sexta Turma",
+      "status": "partial",
+      "records": 2289,
+      "rejected": 0,
+      "license": "cc-by",
+      "catalogUrl": "https://dadosabertos.web.stj.jus.br/dataset/espelhos-de-acordaos-sexta-turma",
+      "resources": [
+        {
+          "name": "20260831.json",
+          "id": "94c4e314-91f3-470c-8f8b-d1914303ca16",
+          "url": "https://dadosabertos.web.stj.jus.br/dataset/3e51dda9-0d9c-418e-9423-79284d6c9a9b/resource/94c4e314-91f3-470c-8f8b-d1914303ca16/download/20260831.json"
+        }
+      ]
+    }
+  ],
+  "chunks": [
+    {
+      "file": "stj-437d7f43f4584eed.json.gz",
+      "records": 350,
+      "sha256": "437d7f43f4584eedaa7ea3d0ef2646d22f4cd7847159b902ab1d94646bdc958b",
+      "bytes": 206337
+    },
+    {
+      "file": "stj-d3518ea68047353c.json.gz",
+      "records": 350,
+      "sha256": "d3518ea68047353ce9185b59978e9dd4590d4a47ad7bad37d800c3548fad6541",
+      "bytes": 173661
+    },
+    {
+      "file": "stj-dec826a952a878f8.json.gz",
+      "records": 350,
+      "sha256": "dec826a952a878f81119e6aaea067e566ac2f6283faeec0fb135c2a69b8e7d70",
+      "bytes": 238907
+    },
+    {
+      "file": "stj-c70526d48f2a012a.json.gz",
+      "records": 350,
+      "sha256": "c70526d48f2a012ad2120c8764065676970b369895d5cddf8eddee43fb75208e",
+      "bytes": 208476
+    },
+    {
+      "file": "stj-995e5fcb438253ab.json.gz",
+      "records": 350,
+      "sha256": "995e5fcb438253abfffe1a6a6ab5894c4766cfb14c98f55e384f60bd9ca347b0",
+      "bytes": 281546
+    },
+    {
+      "file": "stj-abb84ef92f5997b3.json.gz",
+      "records": 350,
+      "sha256": "abb84ef92f5997b369703b7f7cc8b15da8a65e5a4517ee0fb62118fedbf78415",
+      "bytes": 246173
+    },
+    {
+      "file": "stj-d1a8c92f6d5386e1.json.gz",
+      "records": 350,
+      "sha256": "d1a8c92f6d5386e17f8479a675a2db0558b0c1a245b8d20f2797f9b1c5a92aa9",
+      "bytes": 275843
+    },
+    {
+      "file": "stj-70c23963fa73eae8.json.gz",
+      "records": 350,
+      "sha256": "70c23963fa73eae804ace7b999a9d9b93328f40fc9a7fb8309d2350246142059",
+      "bytes": 274392
+    },
+    {
+      "file": "stj-f5789fe8de5cb0d3.json.gz",
+      "records": 350,
+      "sha256": "f5789fe8de5cb0d392a97107ab17e8271d5b8e861c56c270cb41c5b900897a17",
+      "bytes": 221480
+    },
+    {
+      "file": "stj-84f8cb9b3c6e5927.json.gz",
+      "records": 350,
+      "sha256": "84f8cb9b3c6e5927cce8fef19629e59e7d4f0e64366272bdefde51988578202e",
+      "bytes": 279818
+    },
+    {
+      "file": "stj-71dfaa18ab2c3368.json.gz",
+      "records": 350,
+      "sha256": "71dfaa18ab2c3368fcdb1f27c64bdaff38501d32615807a3456513be7b42194d",
+      "bytes": 218529
+    },
+    {
+      "file": "stj-76d5022cc42de569.json.gz",
+      "records": 350,
+      "sha256": "76d5022cc42de5696c11a720fd7eb47864d9e319ede854c1fd8a35286bf6b5d7",
+      "bytes": 240419
+    },
+    {
+      "file": "stj-46053ec05e4970d6.json.gz",
+      "records": 350,
+      "sha256": "46053ec05e4970d64d2bbce0114df2258c0030eb9ec429b2a7fa05360d1a0513",
+      "bytes": 255436
+    },
+    {
+      "file": "stj-4584a30de97ed2d9.json.gz",
+      "records": 350,
+      "sha256": "4584a30de97ed2d9a92f9da178ab61f093c7461d226025281325d7cf136e3d0d",
+      "bytes": 297561
+    },
+    {
+      "file": "stj-02120a62fe0b0cdc.json.gz",
+      "records": 350,
+      "sha256": "02120a62fe0b0cdc8364f01833e53925401496d61dd23411ad47b522464474db",
+      "bytes": 192053
+    },
+    {
+      "file": "stj-33b39502dd82aa4c.json.gz",
+      "records": 350,
+      "sha256": "33b39502dd82aa4cab39051eba63745fc5912404efc8400f55426bc781107f21",
+      "bytes": 158484
+    },
+    {
+      "file": "stj-cf4c7075df092d13.json.gz",
+      "records": 350,
+      "sha256": "cf4c7075df092d137d971defc767a23b38a5b6baabe6187a37f1e0d751560251",
+      "bytes": 178420
+    },
+    {
+      "file": "stj-932c507c1cf607a3.json.gz",
+      "records": 350,
+      "sha256": "932c507c1cf607a36b3015b976df56d88aee0af0c5f29bccaafeed3bfaa6dd7f",
+      "bytes": 226187
+    },
+    {
+      "file": "stj-43d3871c9baa4717.json.gz",
+      "records": 350,
+      "sha256": "43d3871c9baa47173958174d56f4eedf7ead775d9933702cd13e8434ef8d90eb",
+      "bytes": 195426
+    },
+    {
+      "file": "stj-f0bd2c7bd125c18c.json.gz",
+      "records": 350,
+      "sha256": "f0bd2c7bd125c18c6691fb7b9614fe16c4c21dad8a8789f906bc80d0f82b87f6",
+      "bytes": 193557
+    },
+    {
+      "file": "stj-366453258cbd45fe.json.gz",
+      "records": 350,
+      "sha256": "366453258cbd45fe195b46853bd31c6607dfec1ca7f8154975af71e9833f81d8",
+      "bytes": 129712
+    },
+    {
+      "file": "stj-7db7b0c988fc87dd.json.gz",
+      "records": 350,
+      "sha256": "7db7b0c988fc87dd4b76561dea052c9765136ebc4938928757414035498592b1",
+      "bytes": 187605
+    },
+    {
+      "file": "stj-c2300c129463af8a.json.gz",
+      "records": 350,
+      "sha256": "c2300c129463af8a2d90ae119f951585dc8223b206fbc4c0ed30e07f5e44b890",
+      "bytes": 246871
+    },
+    {
+      "file": "stj-8a16eb173f0d4c02.json.gz",
+      "records": 350,
+      "sha256": "8a16eb173f0d4c025045908c4b9cede2ceeb93c3d106a289ca17f6caea20aa9b",
+      "bytes": 307345
+    },
+    {
+      "file": "stj-5beb3de8b914c9ff.json.gz",
+      "records": 350,
+      "sha256": "5beb3de8b914c9ff902114b3b88cad401ae00a83d57127b633d89e540fad1d32",
+      "bytes": 289409
+    },
+    {
+      "file": "stj-eecfd6ca14f5b21b.json.gz",
+      "records": 350,
+      "sha256": "eecfd6ca14f5b21bbff169a758df67eac96a55d9c7b2f2bd53c57ad607345eeb",
+      "bytes": 322594
+    },
+    {
+      "file": "stj-f9519734c98c11c0.json.gz",
+      "records": 350,
+      "sha256": "f9519734c98c11c05ad1230120da7fd912b361987f84f40537da83822cec2b7f",
+      "bytes": 248275
+    },
+    {
+      "file": "stj-96186d99ba72cfb6.json.gz",
+      "records": 81,
+      "sha256": "96186d99ba72cfb6860cd53b45ff0f586a45683652e1665a9253f6b90e23478c",
+      "bytes": 69554
+    }
+  ]
+}
