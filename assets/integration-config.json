@@ -1,4 +1,4 @@
 {
-  "apiBase": "",
+  "apiBase": "https://juriscreis-api.onrender.com",
   "manifestUrl": "data/manifest.json"
 }
