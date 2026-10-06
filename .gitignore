@@ -2,3 +2,7 @@ _site/
 node_modules/
 *.log
 .DS_Store
+
+.source-cache/
+__pycache__/
+*.pyc

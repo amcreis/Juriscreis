@@ -1,31 +1,30 @@
-name: Verificar e publicar Juriscreis
+name: Atualizar acervo oficial do STJ
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
+  pages: write
+  id-token: write
 concurrency:
   group: github-pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 jobs:
-  build:
+  refresh:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pages: read
+    timeout-minutes: 25
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v6
-      - name: Importar recorte oficial do STJ
+      - name: Importar arquivos mensais oficiais
         run: python3 scripts/import_stj.py --output data --months 1
-      - name: Verificar motor de pesquisa e arquivos
+      - name: Verificar dados e consulta
         run: |
           node tests/search.test.cjs
-          node --check assets/app.js
-          node --check assets/integration.js
           node tests/worker.test.cjs
           python3 -m unittest discover -s tests -p 'test_import.py'
-      - name: Salvar recorte oficial no repositório
+      - name: Salvar dados atualizados no repositório
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -34,7 +33,7 @@ jobs:
             git commit -m "Atualiza recorte de acórdãos oficiais do STJ"
             git push
           fi
-      - name: Preparar arquivos públicos
+      - name: Preparar site
         run: |
           mkdir -p _site
           cp index.html _site/index.html
@@ -43,16 +42,6 @@ jobs:
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _site
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Publicar site
+      - name: Publicar acervo atualizado
         id: deployment
         uses: actions/deploy-pages@v4

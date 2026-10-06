@@ -1,8 +1,14 @@
-# Juris Estudo
+# Juriscreis
 
 Portal de pesquisa jurídica para estudantes de Direito, preparado para GitHub Pages. HTML, CSS e JavaScript, sem dependências de produção, chaves de API ou instalação obrigatória.
 
-## O que funciona nesta versão
+## Integrações adicionadas
+
+O site agora pesquisa **9.531 acórdãos oficiais do STJ**, importados do último arquivo mensal de cada um dos dez conjuntos de espelhos. A interface mostra ementas originais e cobertura efetiva. O conector de consulta direta à API do TJDFT está implementado e testado; sua ativação depende da implantação do serviço gratuito.
+
+Leia [INTEGRACOES.md](INTEGRACOES.md) para ativar o serviço do TJDFT e atualizar o acervo. A integração nacional completa ainda não foi concluída. Os sete resumos abaixo continuam em uma aba separada.
+
+## Seleção de estudo e recursos anteriores
 
 - Pesquisa local em sete resumos editoriais verificados em fontes oficiais: seis súmulas do STJ e o Tema 786 do STF, referenciado por página oficial do TJDFT.
 - Pesquisa por termos, todos os termos, qualquer termo ou expressão exata; normalização de acentos e algumas relações explícitas de palavras.
@@ -11,7 +17,7 @@ Portal de pesquisa jurídica para estudantes de Direito, preparado para GitHub P
 - Busca externa pelo Google, limitada a páginas `jus.br`, com tema e tribunal escolhidos; atalhos para bases oficiais.
 - Interface responsiva, navegação por teclado e URLs que preservam os filtros da pesquisa.
 
-**O objetivo nacional ainda não está completo.** O diretório não significa que os 92 acervos estejam integrados. Os sete registros são resumos, não uma base de ementas ou inteiro teor. A pesquisa externa pode retornar notícias ou omitir julgados não indexados. Não há ingestão, atualização automática, backend ou busca por IA. Não é preciso fingir uma cobertura inexistente para usar a interface e evoluir o projeto.
+**O objetivo nacional ainda não está completo.** O diretório não significa que os 92 acervos estejam integrados. Os sete registros são resumos, não uma base de ementas ou inteiro teor. A pesquisa externa pode retornar notícias ou omitir julgados não indexados. Há importação de um recorte de acórdãos do STJ e backend preparado para a API do TJDFT. Não há cobertura nacional completa ou busca por IA. Não é preciso fingir uma cobertura inexistente para usar a interface e evoluir o projeto.
 
 ## Publicar pelo GitHub sem programar
 
@@ -32,7 +38,7 @@ Não é necessário criar um token pessoal: a publicação usa o `GITHUB_TOKEN` 
 
 ## Abrir no computador
 
-Abra `index.html` no navegador. Os dados estão em um arquivo JavaScript e não dependem de `fetch`, portanto essa versão funciona também diretamente no computador.
+A seleção de sete resumos funciona ao abrir `index.html` diretamente. Para pesquisar os acórdãos importados, use um servidor HTTP local: o acervo usa arquivos comprimidos e um Web Worker. A publicação no GitHub executa a importação e salva os arquivos em `data/`. Em um checkout que ainda não tenha os dados, execute primeiro `python scripts/import_stj.py --output data --months 1`.
 
 Para servir por HTTP, se tiver Python instalado:
 
